@@ -1,3 +1,15 @@
+@font-face {
+    font-family: NueHaasRegular;
+    src: url(static/fonts/Neue-Haas-Regular.ttf);
+}
+@font-face {
+    font-family: NueHaasMedium;
+    src: url(static/fonts/Neue-Haas-Medium.ttf);
+}
+@font-face {
+    font-family: NueHaasBold;
+    src: url(static/fonts/Neue-Haas-Bold.ttf);
+}
 body {
     overflow-x: hidden;
     margin: 0;
@@ -9,7 +21,19 @@ a {
 h3 {
     margin-left: 1em;
     font-size: xxx-large;
-    font-family: sans-serif;
+    font-family: NueHaasRegular ,sans-serif;
+    font-weight: 300;
+}
+h2 {
+    margin-left: 1em;
+    font-size: xx-large;
+    font-family: NueHaasRegular, sans-serif;
+    font-weight: 300;
+}
+h4 {
+    margin-left: 1em;
+    font-size: large;
+    font-family: NueHaasRegular, sans-serif;
     font-weight: 300;
 }
 #home-grid {
@@ -18,21 +42,23 @@ h3 {
     height: 90vh;
     grid-template-columns: 50% 50%;
 }
+
 #section1 {
     display: grid;
     grid-template-columns: 100%;
+    grid-template-rows: 65% 35%;
     height: 90vh;
 
 }
 #section2 {
     display: grid;
     grid-template-columns: 100%;
+    grid-template-rows: 30% 70%;
     height: 90vh;
 
 }
 #future-of-work-box {
     background-color: white;
-    height: 65vh;
     color: #0D3841;
 }
 #future-of-work-box:hover {
@@ -41,7 +67,7 @@ h3 {
 }
 #date-box {
     background-color: #0B343A;
-    height: 25vh;
+   
 }
 #date-box:hover {
     opacity: 0.8;
@@ -53,24 +79,130 @@ h3 {
     margin-top: 0.5em;
 }
 #speakers-box {
-    background-color: #367179;
-    height: 30vh;
+    background-color: #367179;   
     color: white;
 }
 #speakers-box:hover {
-    opacity: 0.8;
+    background-color: #5E8D94;
 }
 #program-box {
     background-color: #33ABBC;
     color: white;
-    height: 60vh;
+  
 }
 #program-box:hover {
-   opacity: 0.8;
+   background-color: #5CBCC9;
 
 }
+
+#speakers-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+#speakers-heading {
+    background-color: #367179;
+    color: white;
+}
+.speaker-details-grid-cell {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+}
+.speaker-image-div {
+    width: 4em;
+    height: 4em;
+}
+#speaker-1-image {
+    background-image: url(static/richard.jpg);
+}
+#speaker-2-image {
+    background-image: url(static/fridah.jpg);
+}
+#speaker-3-image {
+    background-image: url(static/famous.jpg);
+}
+#speaker-4-image {
+    background-image: url(static/emily.jpg);
+}
+#speaker-5-image {
+    background-image: url(static/kelly.jpg);
+}
+.speaker-image-div {
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#speaker-1-grid-cell {
+    background-color: #0D3841;
+    color: #33ABBC;
+}
+#speaker-1-details-grid-cell {
+    background-color: #0D3841;
+    color: #33ABBC;
+}
 #footer {
+    position: relative;
     width: 100vw;
     height: 10vh;
     background-color: #0F4751;
+    text-align: center;
+    color: white;
+    font-family: NueHaasRegular, sans-serif;
+}
+#footer li {
+    display: inline;
+    
+
+}
+#footer a{
+    color: white;
+    position: relative;
+   
+}
+#footer img {
+    position: relative;
+    height: 36px;
+    
+}
+.footer-content {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    align-items: center;
+    padding-top: 5px;
+}
+
+@media screen and (max-width: 800px) {
+    #home-grid {
+        grid-template-columns: 100%;
+        height: auto;
+    }
+
+    h3 {
+        margin-left: 0.5em;
+        font-size: xx-large;
+    }
+
+    #section1 {
+        height: 55vh;
+    }
+
+    #section2 {
+        height: 35vh;
+    }
+
+    #future-of-work-box {
+        height: 30vh;
+    }
+    #date-box h3 {
+        margin-left: 0.5em;
+    }
+    .footer-content {
+        grid-template-columns: 33% 33% 33%;
+        text-align: left;
+        margin-left: 1em;
+        row-gap: 1em;
+    }
+
 }
